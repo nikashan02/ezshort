@@ -1,0 +1,28 @@
+{
+  "name": "ezshort",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikashan02/ezshort.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikashan02/ezshort/issues"
+  },
+  "homepage": "https://github.com/nikashan02/ezshort#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.10",
+    "shortid": "^2.2.16"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
