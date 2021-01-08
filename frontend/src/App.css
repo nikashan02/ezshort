@@ -1,7 +1,50 @@
-a {
-  color: #ECEFF4;
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  font-size: 8vw;
+  margin-bottom: 1vw;
+  color: #FFFFFF;
 }
 
-a:hover {
-  color: #D8DEE9;
+fieldset {
+  border: 0;
+  font-size: 2vw;
+  padding: 0.5em;
+  font-family: 'Montserrat';
+}
+
+.urlInput {
+  font-size: inherit;
+  padding: 0.2em;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  border-radius: 15px 0px 0px 15px;
+  width: 40vw;
+  font-family: inherit;
+  border-width:0px;
+  border:none;
+}
+
+.shortenBtn {
+  font-size: inherit;
+  padding: 0.2em;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  border-radius: 0px 15px 15px 0px;
+  font-family: 'Montserrat';
+  border-width:0px;
+  border:none;
+  cursor: pointer;
+  background-color: #FE5F55;
+  color: #FFFFFF;
+}
+
+input:focus {
+  outline-width: 0;
 }

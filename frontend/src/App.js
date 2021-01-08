@@ -1,16 +1,7 @@
 import React, { Component } from 'react';
 import './App.css'
-import { Typography } from '@material-ui/core';
-import LazyHero from 'react-lazy-hero';
-import { withStyles} from "@material-ui/core/styles";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Redirect from './Redirect';
-
-const WhiteTextTypography = withStyles({
-  root: {
-    color: "#ECEFF4"
-  }
-})(Typography);
 
 class App extends Component {
   render() {
@@ -21,6 +12,22 @@ class App extends Component {
           <Route path="/" exact render={() => (
             <div>
               
+              <header style={{display: "flex", justifyContent: "center", alignItems: "flex-end", height: "40vh"}}>
+                <h1>ezShort</h1>
+              </header>
+              
+              <main>
+                <form className="form-inline">
+                  <fieldset style={{display: "flex", justifyContent: "center", alignItems: "flex-start"}}>
+                    <input className="urlInput"/>
+                    <input className="shortenBtn" type="button" value="Shorten"/>
+                  </fieldset>
+                </form>
+                {/* <div style={{display: "flex", justifyContent: "center", alignItems: "flex-start"}}>
+                  <p>Hello</p>
+                </div> */}
+              </main>
+
             </div>
           )} />
           <Route path="/:hash" component={Redirect} exact />
