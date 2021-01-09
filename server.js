@@ -6,13 +6,15 @@ const ShortUrl = require('./models/short');
 const bodyParser = require("body-parser");
 const path = require('path');
 const cors = require("cors");
+require('dotenv').config();
+const URI = process.env.MONGO_URI;
 
 app.use(cors());
 
-mongoose.connect( process.env.MONGODB_URI || 'mongodb://localhost/EZShort', {
+mongoose.connect(URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
-})
+});
 
 const connection = mongoose.connection;
 
