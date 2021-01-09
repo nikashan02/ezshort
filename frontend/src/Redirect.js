@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import axios from "axios";
+import axios from 'axios';
+import './App.css';
 
 class Redirect extends Component {
   state = {
@@ -15,7 +16,6 @@ class Redirect extends Component {
       }
     })
     .then(res => {
-      console.log(res.data);
       if (res.data.full) {
         window.location.replace(res.data.full);
       }
@@ -29,8 +29,10 @@ class Redirect extends Component {
 
   render() {
     return (
-      <div>
-        <p>{this.state.redirectURL}</p>
+      <div style={{display: "flex", justifyContent: "center", alignItems: "flex-start"}}>
+        <div>
+          <span className='link'>Redirecting (if the requested page does not load, your link may have expired)</span>
+        </div>
       </div>
     );
   }

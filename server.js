@@ -4,8 +4,12 @@ const port = process.env.PORT || 5000;
 const mongoose = require('mongoose');
 const ShortUrl = require('./models/short');
 const bodyParser = require("body-parser");
+const path = require('path');
+const cors = require("cors");
 
-mongoose.connect('mongodb://localhost/EZShort', {
+app.use(cors());
+
+mongoose.connect( process.env.MONGODB_URI || 'mongodb://localhost/EZShort', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -38,6 +42,13 @@ app.get('/:redirect', (req, res) => {
     }
   })
 })
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('frontend/build'));
+  app.get('*', (req, res) => {
+     res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
+  })
+}
 
 app.listen(port, function() {
   console.log("Server is running on Port: " + port);
