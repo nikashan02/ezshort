@@ -1,6 +1,6 @@
 # EZShort
 
-EZShort, built on the MERN stack, is a URL shortener that provides instant conversion of long links into smaller ones that can be more easily shared.
+[EZShort](https://ezshort.herokuapp.com/), built on the MERN stack, is a URL shortener that provides instant conversion of long links into smaller ones that can be more easily shared.
 
 ![Screenshot](https://github.com/nikashan02/ezshort/blob/main/screenshot.png?raw=true)
 
