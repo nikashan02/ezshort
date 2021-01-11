@@ -1,4 +1,4 @@
-# The r/WallStreetBets Weekly Stock Portfolio
+# ezShort
 
 This MERN stack project (available at [ezShort.herokuapp.com](https://ezshort.herokuapp.com)) converts long links into shorter ones that can be more easily shared.
 
