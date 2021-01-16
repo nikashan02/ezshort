@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, withRouter } from 'react-router-dom';
 import Redirect from './Redirect';
 require('dotenv').config();
 
-ReactGA.initialize(process.env.GA_KEY); 
+ReactGA.initialize(process.env.REACT_APP_GA_KEY); 
 
 function App() {
 
